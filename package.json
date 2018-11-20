@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Rachelnarios/Eskate#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "express": "^4.16.4",
     "hbs": "^4.0.1"
   }
 }
