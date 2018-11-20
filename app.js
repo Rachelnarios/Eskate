@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+var bodyParser = require('body-parser')
 const PORT = process.env.PORT || 3000
 express()
   .use(express.static(path.join(__dirname, 'public')))
