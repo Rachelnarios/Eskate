@@ -9,7 +9,7 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'hbs')
 
-  .get('/', (req, res) => res.render('layout'))
+  .get('/', (req, res) => res.render('land'))
 
 
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
