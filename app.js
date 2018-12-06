@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const session = require("express-session"); 
+const session = require("express-session");
 const bodyParser = require('body-parser');
 const db = require("./db.js");
 const PORT = process.env.PORT || 3000;
@@ -18,7 +18,9 @@ const app = express()
 
 
 //---------------Requests that serve up HTML-----------------------------------
-app.get('/', (req, res) => res.render('land'))
+app.get('/', (req, res) => res.sendFile("/index.html"))
+app.get('/station', (req, res) => res.render('station'))
+app.get('/land', (req, res) => res.render('land'))
 
 
 //---------------Requests that alter the state of the database-----------------
@@ -52,7 +54,7 @@ app.post('/register',(req,res)=>{
     })
 })
 
-//Function that listens for log in requests 
+//Function that listens for log in requests
 app.post("/login",(req,res)=>{
     db.userModel.find({username:req.body.username},(err,data)=>{
         if (err){
@@ -112,8 +114,8 @@ app.post("/login",(req,res)=>{
                     }
                 });
             }
-        }     
-        })  
+        }
+        })
     })
     //Return a board
     app.post("/returnboard",(err,data)=>{
