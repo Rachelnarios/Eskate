@@ -8,7 +8,7 @@ body,td,th,p{
 	line-height: 1.5;
 }
 body {
-	background-color: #fdfdfd;
+	background-color: #000;
 	margin: 0;
 	position:relative;
 }
@@ -33,15 +33,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 
-h2 {
-  color: #00FFFF !important;
-}
+
 
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 #maincontent {
-  background-color: #f3f3f3;
+  background-color: #000;
   min-height: 100%;
 }
 
@@ -100,5 +98,3 @@ nav h1 a {
   width: 100%;
   background-color: #ccc;
 }
-
-

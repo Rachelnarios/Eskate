@@ -16,7 +16,7 @@ body {
   font-weight: 300;
   line-height: 1.42em;
   color:#A7A1AE;
-  background-color:#1F2739;
+  background-color:black;
 }
 
 h1 {
@@ -51,7 +51,6 @@ h2 a {
   font-weight: bold;
   font-size: 1em;
   text-align: left;
-  color: #185875;
 }
 
 .container td {
@@ -77,18 +76,10 @@ h2 a {
   padding-left:2%;
 }
 
-/* Background-color of the odd rows */
-.container tr:nth-child(odd) {
-  background-color: #323C50;
-}
 
-/* Background-color of the even rows */
-.container tr:nth-child(even) {
-  background-color: #2C3446;
-}
 
 .container th {
-  background-color: #1F2739;
+  background-color: black;
 }
 
 .container td:first-child { color: #FB667A; }
