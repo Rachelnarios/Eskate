@@ -21,6 +21,7 @@ const app = express()
 app.get('/', (req, res) => res.sendFile("/index.html"))
 app.get('/station', (req, res) => res.render('station'))
 app.get('/land', (req, res) => res.render('land'))
+app.get('/usertrips', (req, res) => res.render('usertrips'))
 
 
 //---------------Requests that alter the state of the database-----------------
