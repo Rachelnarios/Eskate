@@ -1,0 +1,84 @@
+[{
+  "station_name": "Union Square",
+  "total_racks": 19,
+  "available_skate": 19,
+  "coordinates":[40.735863, -73.991084]
+}, {
+  "station_name": "Madison Av and 3rd",
+  "total_racks": 17,
+  "available_skate": 17,
+  "coordinates":[40.735863, -73.991084]
+},
+   {
+  "station_name": "Bryant Park",
+  "total_racks": 20,
+  "available_skate": 20
+}, {
+  "station_name": "Times Square",
+  "total_racks": 20,
+  "available_skate": 20
+}, {
+  "station_name": "NYU",
+  "total_racks": 17,
+  "available_skate": 17
+}, {
+  "station_name": "Soho",
+  "total_racks": 19,
+  "available_skate": 19
+}, {
+  "station_name": "Noho",
+  "total_racks": 17,
+  "available_skate": 17
+}, {
+  "station_name": "China Town",
+  "total_racks": 17,
+  "available_skate": 17
+}, {
+  "station_name": "Murray Hill",
+  "total_racks": 17,
+  "available_skate": 17
+}, {
+  "station_name": "Avenue",
+  "total_racks": 15,
+  "available_skate": 15
+}, {
+  "station_name": "Parkway",
+  "total_racks": 19,
+  "available_skate": 19
+}, {
+  "station_name": "Pass",
+  "total_racks": 18,
+  "available_skate": 18
+}, {
+  "station_name": "Way",
+  "total_racks": 18,
+  "available_skate": 18
+}, {
+  "station_name": "Center",
+  "total_racks": 17,
+  "available_skate": 17
+}, {
+  "station_name": "Court",
+  "total_racks": 16,
+  "available_skate": 16
+}, {
+  "station_name": "Junction",
+  "total_racks": 19,
+  "available_skate": 19
+}, {
+  "station_name": "Avenue",
+  "total_racks": 20,
+  "available_skate": 20
+}, {
+  "station_name": "Center",
+  "total_racks": 18,
+  "available_skate": 18
+}, {
+  "station_name": "Parkway",
+  "total_racks": 18,
+  "available_skate": 18
+}, {
+  "station_name": "Junction",
+  "total_racks": 17,
+  "available_skate": 17
+}]

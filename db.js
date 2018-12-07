@@ -24,7 +24,7 @@ const Station = new mongoose.Schema({
 	lng:{type:Number, required:true},
 	total_dock: {type:Number, required:true},
 	available_skateboards: [{type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'}]
-}); 
+});
 
 const Skateboard = new mongoose.Schema({
 	in_use: {type: Boolean, default:false}
