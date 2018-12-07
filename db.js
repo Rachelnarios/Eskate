@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 
 const User = new mongoose.Schema({
   username: {type: String, required: true},
-  email: {type: String, required: true},
+  //email: {type: String, required: true},
   //password: {type: String, unique: true, required: true},
   history_trips: [{
   		trip_id: {type: mongoose.Schema.Types.ObjectId, ref:'Trip'},
