@@ -38,7 +38,7 @@ app.post('/register',(req,res)=>{
             const newUser = new db.userModel({
                 username: req.body.username,
                 email: req.body.email,
-                 history_trips: []
+                history_trips: []
             });
             newUser.save((err)=>{
                 if (err){

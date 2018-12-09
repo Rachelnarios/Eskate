@@ -24,7 +24,7 @@ h1 {
   font-weight: 300;
   line-height:1em;
   text-align: center;
-  color: #4DC3FA;
+
 }
 
 h2 {
@@ -34,14 +34,23 @@ h2 {
   display: block;
   line-height:1em;
   padding-bottom: 2em;
-  color: #FB667A;
+  ;
 }
 
 h2 a {
   font-weight: 700;
   text-transform: uppercase;
-  color: #FB667A;
+  ;
   text-decoration: none;
+}
+button{
+
+    text-align: right;
+      font-size: 12px;
+      border: none;
+      cursor: pointer;
+
+
 }
 
 .blue { color: #185875; }
@@ -82,8 +91,40 @@ h2 a {
   background-color: black;
 }
 
-.container td:first-child { color: #FB667A; }
+.container td:first-child { ; }
+.dropbtn {
+  text-align: right;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+}
 
+
+.dropdown {
+    position: center;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 100px;
+    overflow: auto;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+.form{
+  text-align: center
+}
+.show {display: block;}
 .container tr:hover {
   background-color: #464A52;
   -webkit-box-shadow: 0 6px 6px -6px #0E1119;

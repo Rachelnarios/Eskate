@@ -1,9 +1,25 @@
 <body>
     <h2> Trip History </h2>
 
+      <form>
+        Userame<br>
+        <input type="text" name="user">
+        <br><br>
+        <input type="submit" value="Filter">
+      </form>
+
     <table class="container">
       <thead>
         <tr>
+          <!-- <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">User List</button>
+            <div id="myDropdown" class="dropdown-content">
+              <p name="Timmy">Timmy</p>
+              <p name="Jow">Jow</p>
+              <p  name="Carly">Carly</p>
+            </div>
+          </div>
+          <div> -->
           <th><h1>Location</h1></th>
           <th><h1>Checkout</h1></th>
           <th><h1>Check in</h1></th>
@@ -50,3 +66,27 @@
       </tbody>
     </table>
   </body>
+
+
+      <script>
+      /* When the user clicks on the button,
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
