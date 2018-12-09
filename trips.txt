@@ -1,0 +1,6 @@
+/*userID: start_time,end_time,startstation,endstation*/
+Gudrun Monaha:10:00,2:00 am,LES Station,Upper East Side Station
+Gudrun Monaha:10:00,2:00 am,LES Station,Upper East Side Station
+Donnie Schumm:3:00.4:00,Park Slope Station,Colombus Circle Station
+Ines Koch:1:30pm,2:55pm,West 4th Street Station,Wall Street Station
+Ines Koch:3:00,5:00,Union Sq Station,LES Station

@@ -7,14 +7,12 @@ const mongoose = require('mongoose');
 
 const User = new mongoose.Schema({
   username: {type: String, required: true},
-  email: {type: String, required: true},
-  //password: {type: String, unique: true, required: true},
+  email: {type: String, required:true},
   history_trips: [{
-  		trip_id: {type: mongoose.Schema.Types.ObjectId, ref:'Trip'},
-  		start_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
-  		end_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
-  		check_out_time: {type: Date, required:true},
-  		return_time: {type: Date, required:true}
+  		start_station: {type: String},
+  		end_station: {type: String},
+  		check_out_time: {type: Date},
+  		return_time: {type: Date}
   		}]
 });
 
@@ -23,7 +21,7 @@ const Station = new mongoose.Schema({
 	lat:{type:Number, required:true},
 	lng:{type:Number, required:true},
 	total_dock: {type:Number, required:true},
-	available_skateboards: [{type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'}]
+	available_skateboards: {type:Number, required:true}
 }); 
 
 const Skateboard = new mongoose.Schema({
@@ -31,16 +29,13 @@ const Skateboard = new mongoose.Schema({
 });
 
 const Current_Trip = new mongoose.Schema({
-	user_id: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-	//board_id: {type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'},
-	start_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
-	check_out_time: {type: Date, required:true}
+	user_id: {type: String},
+	start_station: {type: String},
+	check_out_time: {type: String, required:true}
 });
 
 const Completed_Trips = new mongoose.Schema({
-	//_id: {type: mongoose.Schema.Types.ObjectId, ref:'Current_Trip'},
   	user_id: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-  	//board_id: {type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'},
   	start_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
   	end_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
   	check_out_time: {type: Date, required:true},

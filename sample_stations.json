@@ -1,0 +1,74 @@
+{ 
+    "stations":[
+        {
+            "name":"Union Sq Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Times Sqaure Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"West 4th Street Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Wall Street Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"LES Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Upper West Side Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Upper East Side Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Williamsburg Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Park Slope Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          },
+          {
+            "name":"Colombus Circle Station",
+            "lat":100,
+            "lng":156,
+            "total_dock":20,
+            "available_skateboards":10
+          }
+    ]
+}
