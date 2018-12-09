@@ -35,9 +35,9 @@ const Current_Trip = new mongoose.Schema({
 });
 
 const Completed_Trips = new mongoose.Schema({
-  	user_id: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-  	start_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
-  	end_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
+  	user_id: {type: String},
+  	start_station: {type:String},
+  	end_station: {type:String},
   	check_out_time: {type: Date, required:true},
   	return_time: {type: Date, required:true}
 });

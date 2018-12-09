@@ -6,7 +6,7 @@ var marker;
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
-  initMap(); // added 
+  initMap(); // added
 });
 
 
@@ -29,7 +29,7 @@ initMap = () => {
     id: 'mapbox.streets'
   }).addTo(newMap);
   self.marker = L.marker([40.735863, -73.991084]).addTo(newMap);
-  self.marker.bindPopup("<b>Union Square!</b><br>Skateboard Station.").openPopup();
+  self.marker.bindPopup("<b>Union Square</b><br>Available Skateboards:5 <br> Total Racks: 20").openPopup();
   //updateStations();
 }
 
@@ -49,6 +49,4 @@ addMarkersToMap = (stations = self.stations) => {
     }
     self.markers.push(marker);
   });
-} 
-
-
+}
