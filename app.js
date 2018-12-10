@@ -72,7 +72,9 @@ app.get('/station', (req, res) => res.render('station'))
 app.get('/land', (req, res) => res.render('land'))
 app.get('/usertrips', (req, res) => res.render('usertrips'))
 
-
+app.get("/users",(req,res)=>{
+    res.send(users); 
+})
 //---------------Requests that alter the state of the database-----------------
 
 //Listen for requests to register a new user to the DB
@@ -180,7 +182,7 @@ app.post("/login",(req,res)=>{
                 const start = data.start_station;
                 const checkout = data.check_out_time;
                 
-                let textString = user+":"+checkout+","+req.body.time+","+start+","+req.body.stationName+"\n";
+                let textString = user+","+checkout+","+req.body.time+","+start+","+req.body.stationName+"\n";
                 fs.appendFile('./trips.txt', textString, function (err) {
                     if (err) throw err;
                     console.log('Saved! '+ textString);
