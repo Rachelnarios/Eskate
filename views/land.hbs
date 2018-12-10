@@ -1,3 +1,4 @@
+
 <body>
     <h2> Trip History </h2>
 
@@ -11,6 +12,15 @@
     <table class="container">
       <thead>
         <tr>
+          <body>
+
+<h2>Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+
+
+</body>
           <!-- <div class="dropdown">
           <button onclick="myFunction()" class="dropbtn">User List</button>
             <div id="myDropdown" class="dropdown-content">
@@ -28,13 +38,13 @@
       </thead>
       <tbody>
         <tr>
-          <td>CHELSEA</td>
+          <td >CHELSEA</td>
           <td>9518</td>
           <td>6369</td>
           <td>01:32:50</td>
         </tr>
         <tr>
-          <td>WEST VILLAGE</td>
+          <td >WEST VILLAGE</td>
           <td>7326</td>
           <td>10437</td>
           <td>00:51:22</td>
@@ -89,4 +99,17 @@
           }
         }
       }
+         var request = new XMLHttpRequest();
+          request.open("GET", "/users", false);
+          request.send(null)
+          var users= JSON.parse(request.responseText);
+          for(let i =0; i < users.length; i++){
+            //document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+            console.log (users[i].username);
+        }
+        // var para = document.createElement("p");
+        // var node = document.createTextNode("users[i].username");
+        // para.appendChild(node);
+        // var element = document.getElementById("div1");
+        // element.appendChild(para);
       </script>
