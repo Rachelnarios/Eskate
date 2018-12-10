@@ -1,9 +1,11 @@
-let bikes, stations;
+
 var newMap;
 var marker;
+var marker2;
+var marker3;
 
 /**
- * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ * Fetch neighborhoods as soon as the page is loaded.
  */
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap(); // added
@@ -29,7 +31,11 @@ initMap = () => {
     id: 'mapbox.streets'
   }).addTo(newMap);
   self.marker = L.marker([40.735863, -73.991084]).addTo(newMap);
-  self.marker.bindPopup("<b>Union Square</b><br>Available Skateboards:5 <br> Total Racks: 20").openPopup();
+  self.marker.bindPopup("<b>Union Square</b><br>Available Skateboards:9 <br> Total Racks: 20").openPopup();
+  self.marker2 = L.marker([40.7294, -73.9973]).addTo(newMap);
+  self.marker2.bindPopup("<b>NYU Bobst</b><br>Available Skateboards:15 <br> Total Racks: 16").openPopup();
+  self.marker3 = L.marker([40.755603, -73.984931]).addTo(newMap);
+  self.marker3.bindPopup("<b>Bryant Park</b><br>Available Skateboards:10 <br> Total Racks: 18").openPopup();
   //updateStations();
 }
 

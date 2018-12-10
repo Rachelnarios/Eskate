@@ -19,7 +19,7 @@ const app = express()
 
 //---------------Requests that serve up HTML-----------------------------------
 app.get('/', (req, res) => res.sendFile("/index.html"))
-app.get('/usertrips', (req, res) => res.sendFile("/past_trip.html"))
+app.get('/usertrips', (req, res) => res.render("usertrips"))
 app.get('/station', (req, res) => res.render('station'))
 app.get('/land', (req, res) => res.render('land'))
 app.get('/takeboard', (req,res) => res.render('checkout'))

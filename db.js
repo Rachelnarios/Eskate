@@ -50,7 +50,7 @@ const Completed_Trips = new mongoose.Schema({
 module.exports = {
 userModel: mongoose.model('User', User),
 stationModel: mongoose.model('Station', Station),
-skateboardModel: mongoose.model('Skateboard', Skateboard),
+//skateboardModel: mongoose.model('Skateboard', Skateboard),
 tripModel: mongoose.model('Trip', Current_Trip),
 completedTripsModel:mongoose.model('Complete',Completed_Trips)
 }

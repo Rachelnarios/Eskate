@@ -8,7 +8,7 @@ class DBHelper {
    * Change this to stations.json file location on your server.
    */
   static get DATABASE_URL() {
-    const port = 8000 // Change this to your server port
+    const port = 8000; // Change this to your server port
     return `http://localhost:${port}/data/stations.json`;
   }
 
