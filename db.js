@@ -23,24 +23,22 @@ const Station = new mongoose.Schema({
 	lat:{type:Number, required:true},
 	lng:{type:Number, required:true},
 	total_dock: {type:Number, required:true},
-	available_skateboards: [{type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'}]
+	available_skateboards: {type:Number, required:true}
 });
 
+/*
 const Skateboard = new mongoose.Schema({
 	in_use: {type: Boolean, default:false}
-});
+});*/
 
 const Current_Trip = new mongoose.Schema({
 	user_id: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-	//board_id: {type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'},
 	start_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
 	check_out_time: {type: Date, required:true}
 });
 
 const Completed_Trips = new mongoose.Schema({
-	//_id: {type: mongoose.Schema.Types.ObjectId, ref:'Current_Trip'},
   	user_id: {type: mongoose.Schema.Types.ObjectId, ref:'User'},
-  	//board_id: {type: mongoose.Schema.Types.ObjectId, ref:'Skateboard'},
   	start_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
   	end_station: {type: mongoose.Schema.Types.ObjectId, ref:'Station'},
   	check_out_time: {type: Date, required:true},

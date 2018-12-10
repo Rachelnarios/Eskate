@@ -1,0 +1,86 @@
+
+{{#if user}}
+      <h3>{{user.username}}'s Trip Data</h3>
+{{else}}
+      <form>
+        Userame<br>
+        <input type="text" style="margin-left: 80px;height: 30px;width: 190px;"name="user">
+        <input type="submit" class="add" style="margin-left:75px !important;height:18px!important; width:60px !important;" value="Filter">
+      </form>
+{{/if}}
+	<form>
+		Check out a skateboard<br>
+		<select id="checkout-station-select" class="custom-select" name="checkout-station">
+			<option value="all">Stations</option>
+          	<option value="14th Union Square">14th Union Square</option>
+          	<option value="NYU Bobst">NYU Bobst</option>
+          	<option value="Times Square">Times Square</option>
+          	<option value="Bryant Park">Bryant Park</option>
+          	<option value="World Trade Center">World Trade Center</option>
+          	<option value="Empire State">Empire State</option>
+          	<option value="Korean Town">Korean Town</option>
+          	<option value="Chinatown">Chinatown</option>
+            <option value="Rockefeller Center">Rockefeller Center</option>
+            <option value="Grand Central">Grand Central</option>
+          	<option value="Central Park">Central Park</option>
+          	<option value="Lincoln Center">Lincoln Center</option>
+          	<option value="Google">Google</option>
+          	<option value="Penn Station">Penn Station</option>
+		</select>
+		<input type="submit" class= "add" value="Check out a skateboard"/>
+	</form>
+
+<h1>Current Trip</h1>
+<table class="container">
+	<thead>
+          <th><h2>Checkout Station</h2></th>
+          <th><h2>Checkout Time</h2></th>
+        </tr>
+    </thead>
+    {{#if current_trip}}
+    <tbody>
+        <tr>
+          <td>{{start_station}}</td>
+          <td>{{check_out_time}}</td>
+        </tr>
+    </tbody>
+    <form>
+		<select id="return-station-select" name="Return stations">
+			<option value="all">All Neighborhoods</option>
+          	<option value="Upper East">Upper East</option>
+          	<option value="Upper West">Upper West</option>
+          	<option value="Midtown East">Midtown East</option>
+          	<option value="Midtown West">Midtown West</option>
+          	<option value="Flatiron">Flatiron</option>
+		</select>
+		<input type="submit" class= "return" value="Return a skateboard"/>
+	</form>
+	{{/if}}
+</table>
+<h1>History Trips</h1>
+<table class="container">
+	<thead>
+          <th><h2>Checkout Station</h2></th>
+          <th><h2>Checkout Time</h2></th>
+          <th><h2>Return Station</h2></th>
+          <th><h2>Return Time</h2></th>
+          <th><h2>Total Time</h2></th>
+        </tr>
+    </thead>
+	{{#each history_trip}}
+    <tbody>
+        <tr>
+          <td>{{start_station}}</td>
+          <td>{{check_out_time}}</td>
+          <td>{{end_station}}</td>
+          <td>{{return_time}}</td>
+          <td>{{time}}</td>
+          </tr>
+    </tbody>
+    {{/each}}
+</table>
+
+
+
+
+

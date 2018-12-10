@@ -1,0 +1,16 @@
+[{"name":"14th Union Square","lat":40.735863,"lng":-73.991084,"total_dock":17,"available_skateboards":5},
+{"name":"NYU Bobst","lat":40.7294,"lng":-73.9973,"total_dock":16,"available_skateboards":10},
+{"name":"Times Square","lat":40.758895,"lng":-73.985131,"total_dock":20,"available_skateboards":16},
+{"name":"Bryant Park","lat":40.755603,"lng":-73.984931,"total_dock":15,"available_skateboards":6},
+{"name":"Grand Central","lat":40.7527,"lng":-73.9732,"total_dock":20,"available_skateboards":18},
+{"name":"Rockefeller Center","lat":40.758740,"lng":-73.978674,"total_dock":18,"available_skateboards":16}
+{"name":"World Trade Center","lat":40.7118,"lng":-74.0131,"total_dock":16,"available_skateboards":9},
+{"name":"Empire State","lat":40.7484,"lng":-73.9857,"total_dock":15,"available_skateboards":8},
+{"name":"Korean Town","lat":40.7477,"lng":-73.9869,"total_dock":19,"available_skateboards":14},
+{"name":"Chinatown","lat":40.7158,"lng":-73.9970,"total_dock":15,"available_skateboards":8},
+{"name":"Central Park","lat":40.767778,"lng":-73.971834,"total_dock":16,"available_skateboards":12},
+{"name":"Lincoln Center","lat":40.7725,"lng":-73.9835,"total_dock":17,"available_skateboards":7},
+{"name":"Google","lat":40.7434,"lng":-74.0080,"total_dock":18,"available_skateboards":12},
+{"name":"Penn Station","lat":40.7506,"lng":-73.9935,"total_dock":18,"available_skateboards":7}]
+
+

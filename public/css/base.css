@@ -53,6 +53,7 @@ button{
 
 }
 
+
 .blue { color: #185875; }
 .yellow { color: #FFF842; }
 
@@ -149,4 +150,33 @@ transition-timing-function: line;
 @media (max-width: 800px) {
   .container td:nth-child(4),
   .container th:nth-child(4) { display: none; }
+}
+
+
+.custom-select {
+  letter-spacing: 1px;
+  font-weight: bolder;
+  position: relative;
+  width: 240px;
+  height: 40px;
+  padding: 10px; 
+  margin-top:10px;
+  margin-left: 30px;
+  margin-right: 10px;
+  border-radius: 10px;
+  box-sizing: content-box;
+}
+
+
+.add {
+    border-radius: 8px;
+    box-sizing: content-box;
+    width: 200px;
+    height: 30px;
+    padding: 5px; 
+    margin-left: 60px;
+    margin-top:10px;
+    background-color: #696969;
+    color: #00FFFF;
+    letter-spacing: 2px;
 }
