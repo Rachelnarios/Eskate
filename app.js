@@ -18,7 +18,6 @@ const app = express()
 .set('views', path.join(__dirname, 'views'))
 .set('view engine', 'hbs');
 
-
 //Add sample users on start up
 for(let x in users){
 
@@ -69,11 +68,12 @@ for(let x in stations){
 //---------------Requests that serve up HTML-----------------------------------
 app.get('/', (req, res) => res.sendFile("/index.html"))
 app.get('/station', (req, res) => res.render('station'))
-app.get('/land', (req, res) => res.render('land'))
 app.get('/allusers', (req, res) => res.render('allusers'))
 
 app.get('/usertrips', (req, res) => res.render('usertrips'))
-
+app.get("/land",(req,res)=>{
+  res.render("land")
+})
 app.get("/users",(req,res)=>{
     db.userModel.find({},(err,data)=>{
         res.send(data);

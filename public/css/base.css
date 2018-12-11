@@ -120,18 +120,12 @@ button{
     display: block;
 }
 
-.dropdown a:hover {background-color: #ddd;}
 .form{
   text-align: center
 }
 .show {display: block;}
-.container tr:hover {
-  background-color: #464A52;
-  -webkit-box-shadow: 0 6px 6px -6px #0E1119;
-  -moz-box-shadow: 0 6px 6px -6px #0E1119;
-  box-shadow: 0 6px 6px -6px #0E1119;
-}
 
+w
 /* .container td:hover {
 background-color: #FFF842;
 color: #403E10;

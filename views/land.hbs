@@ -2,12 +2,9 @@
 <body>
     <h2> Trip History </h2>
 
-      <form>
-        Userame<br>
-        <input type="text" name="user">
-        <br><br>
-        <input type="submit" value="Filter">
-      </form>
+      <a href="/allusers">
+        All Users
+        <a>
 
     <table class="container">
       <thead>
@@ -17,7 +14,6 @@
 
 
 <p id="demo"></p>
-
 
 
 </body>
@@ -63,6 +59,7 @@
           request.send(null)
           var para = document.createElement("p");
           var users= JSON.parse(request.responseText);
+          console.log(users)
           for(let i =0; i < users.length; i++){
           //  console.log (users[i].username);
           var para = document.createElement("p");
@@ -75,4 +72,5 @@
           var element = document.getElementById("div1");
           element.appendChild(para);
         }
+
       </script>
