@@ -57,15 +57,26 @@
          var request = new XMLHttpRequest();
           request.open("GET", "/users", false);
           request.send(null)
+          var node2 = document.createTextNode("N/A") ;
           var para = document.createElement("p");
           var users= JSON.parse(request.responseText);
-          console.log(users)
+          //console.log(users)
           for(let i =0; i < users.length; i++){
           //  console.log (users[i].username);
           var para = document.createElement("p");
           var node = document.createTextNode((users[i].username) +"   |   ") ;
           var node1 = document.createTextNode((users[i].email) +"   |   ") ;
-          var node2 = document.createTextNode((users[i].history_trips) +"    |  ") ;
+          console.log(users[i].history_trips)
+
+          if(users[i].history_trips.length > 0){
+            let a = []
+
+            for(var j = 0; j<users[i].history_trips[i].length;j++){
+              a.append(users[i].history_trips[j])
+            }
+          var node2= document.createTextNode(a) ;
+          }
+
           para.appendChild(node);
           para.appendChild(node1);
           para.appendChild(node2);
