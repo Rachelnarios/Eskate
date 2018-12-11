@@ -24,10 +24,7 @@ a {
 	color: orange;
 	text-decoration: none;
 }
-a:hover, a:focus {
-	color: #3397db;
-	text-decoration: none;
-}
+
 a img{
 	border: none 0px #fff;
 }
