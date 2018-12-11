@@ -29,7 +29,7 @@ initMap = () => {
     id: 'mapbox.streets'
   }).addTo(newMap);
   self.marker = L.marker([40.735863, -73.991084]).addTo(newMap);
-  self.marker.bindPopup("<b>Union Square</b><br>Available Skateboards:5 <br> Total Racks: 20").openPopup();
+  self.marker.bindPopup("<b>Union Square</b><br>Available Skateboards:5 <br> Total Racks:" + var).openPopup();
   //updateStations();
 }
 

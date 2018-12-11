@@ -21,7 +21,7 @@ const app = express()
 
 //Add sample users on start up
 for(let x in users){
-    
+
     db.userModel.find({username:users[x].username},(err,data)=>{
         if (err){
             console.log(err);
@@ -70,10 +70,12 @@ for(let x in stations){
 app.get('/', (req, res) => res.sendFile("/index.html"))
 app.get('/station', (req, res) => res.render('station'))
 app.get('/land', (req, res) => res.render('land'))
+app.get('/allusers', (req, res) => res.render('allusers'))
+
 app.get('/usertrips', (req, res) => res.render('usertrips'))
 
 app.get("/users",(req,res)=>{
-    res.send(users); 
+    res.send(users);
 })
 //---------------Requests that alter the state of the database-----------------
 
@@ -123,7 +125,7 @@ app.post("/login",(req,res)=>{
     });
     });
 
-    
+
  //Enter in station name with the request and it will return all data about that station
     app.post("/stationcheck",(req,res)=>{
         db.stationModel.find({name:req.body.stationName},(err,data)=>{
@@ -181,7 +183,7 @@ app.post("/login",(req,res)=>{
                 const user = data.user_id;
                 const start = data.start_station;
                 const checkout = data.check_out_time;
-                
+
                 let textString = user+","+checkout+","+req.body.time+","+start+","+req.body.stationName+"\n";
                 fs.appendFile('./trips.txt', textString, function (err) {
                     if (err) throw err;

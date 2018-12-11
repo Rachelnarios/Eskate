@@ -16,15 +16,10 @@
 
 
 
-<p id="demo"></p>
-
-
-
 </body>
 
-          <th><h1>History</h1></th>
-          <div id="loc"></div>
-<div> Name/Email/trips</div>
+          <th><h1>Usernames</h1></th>
+
         </tr>
       </thead>
       <tbody>
@@ -66,12 +61,8 @@
           for(let i =0; i < users.length; i++){
           //  console.log (users[i].username);
           var para = document.createElement("p");
-          var node = document.createTextNode((users[i].username) +"   |   ") ;
-          var node1 = document.createTextNode((users[i].email) +"   |   ") ;
-          var node2 = document.createTextNode((users[i].history_trips) +"    |  ") ;
+          var node = document.createTextNode(users[i].username);
           para.appendChild(node);
-          para.appendChild(node1);
-          para.appendChild(node2);
           var element = document.getElementById("div1");
           element.appendChild(para);
         }
