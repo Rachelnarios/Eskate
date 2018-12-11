@@ -1,6 +1,5 @@
 var newMap;
-var marker1, marker2, marker3, marker4, marker5, marker6,
-marker7, marker8, marker9, marker10, marker11, marker12;
+var marker1, marker2, marker3, marker4, marker5, marker6,marker7, marker8, marker9, marker10, marker11, marker12;
 
 /**
  * Fetch neighborhoods and cuisines as soon as the page is loaded.
@@ -52,8 +51,6 @@ initMap = () => {
   self.marker11.bindPopup("<b>World Trade Center</b><br><br>Total Racks: 20").openPopup();
   self.marker12 = L.marker([40.758895, -73.985131]).addTo(newMap);
   self.marker12.bindPopup("<b>Times Square</b><br><br>Total Racks: 20").openPopup();
-  self.marker = L.marker([40.735863, -73.991084]).addTo(newMap);
-  self.marker.bindPopup("<b>Union Square</b><br>Available Skateboards:5 <br> Total Racks:" + var).openPopup();
 }
 
 
