@@ -67,6 +67,7 @@ for(let x in stations){
 
 //---------------Requests that serve up HTML-----------------------------------
 app.get('/', (req, res) => res.sendFile("/index.html"))
+app.get('/def', (req, res) => res.render('default'))
 app.get('/station', (req, res) => res.render('station'))
 app.get('/allusers', (req, res) => res.render('allusers'))
 app.get('/takeboard', (req, res) => res.render('checkout'))

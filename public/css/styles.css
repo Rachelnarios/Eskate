@@ -17,6 +17,9 @@ ul, li {
 	font-size: 10pt;
 	color: #333;
 }
+p{
+		color: orange;
+}
 a {
 	color: orange;
 	text-decoration: none;

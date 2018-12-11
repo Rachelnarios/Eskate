@@ -56,7 +56,6 @@ initMap = () => {
 
 
 
-
 /**
  * Add markers for current stations to the map.
  */
