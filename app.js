@@ -73,7 +73,9 @@ app.get('/land', (req, res) => res.render('land'))
 app.get('/usertrips', (req, res) => res.render('usertrips'))
 
 app.get("/users",(req,res)=>{
-    res.send(users); 
+    db.userModel.find({},(err,data)=>{
+        res.send(data);
+    })
 })
 //---------------Requests that alter the state of the database-----------------
 
@@ -129,12 +131,12 @@ app.post("/login",(req,res)=>{
         db.stationModel.find({name:req.body.stationName},(err,data)=>{
             if (err){
                 console.log(err);
-            }else if(!data[0]){
+            }else if(data[0]){
                 res.send(data[0]);
             }else{
                 //Station not found
-                console.log("Station with name "+req.body.name+" not found");
-                res.send("Station with name "+req.body.name+" not found");
+                console.log("Station with name "+req.body.stationName+" not found");
+                res.send("Station with name "+req.body.stationName+" not found");
             }
         })
     })
