@@ -69,7 +69,8 @@ for(let x in stations){
 app.get('/', (req, res) => res.sendFile("/index.html"))
 app.get('/station', (req, res) => res.render('station'))
 app.get('/allusers', (req, res) => res.render('allusers'))
-
+app.get('/takeboard', (req, res) => res.render('checkout'))
+app.get('/returnboard', (req, res) => res.render('returnboard'))
 app.get('/usertrips', (req, res) => res.render('usertrips'))
 app.get("/land",(req,res)=>{
   res.render("land")
@@ -167,6 +168,7 @@ app.post("/login",(req,res)=>{
 	                        start_station: req.body.stationName,
 	                        check_out_time: req.body.checkoutTime
                         }).save();
+                        res.redirect("/returnboard")
                     }
                 });
             }

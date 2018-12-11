@@ -1,0 +1,38 @@
+<form method="POST" action="/takeboard">
+        <b>Return a board</b><br><br>
+        Username: <input type="text" name="username"><br><br>
+        Station: <input type="text" name="stationName"><br><br>
+        Return time: <input type="text" name="time">
+        <input type="submit" value="Return">
+</form>
+
+<h1>Current Trip</h1>
+<table class="container">
+	<thead>
+          <th><h2>Checkout Station</h2></th>
+          <th><h2>Checkout Time</h2></th>
+        </tr>
+    </thead>
+</table>
+<h1>History Trips</h1>
+<table class="container">
+	<thead>
+          <th><h2>Checkout Station</h2></th>
+          <th><h2>Checkout Time</h2></th>
+          <th><h2>Return Station</h2></th>
+          <th><h2>Return Time</h2></th>
+          <th><h2>Total Time</h2></th>
+        </tr>
+    </thead>
+	{{#each history_trip}}
+    <tbody>
+        <tr>
+          <td>{{start_station}}</td>
+          <td>{{check_out_time}}</td>
+          <td>{{end_station}}</td>
+          <td>{{return_time}}</td>
+          <td>{{time}}</td>
+          </tr>
+    </tbody>
+    {{/each}}
+</table>
