@@ -13,9 +13,9 @@ To run the MapReduce job on our service, please follow the procedure below:
 
 The admin will be required to enter the password three times when running skate.sh. The first time is to send trips.txt to Dumbo's login node. The second time is to run a remote script skate_remo.sh that would send trips.txt to the Hadoop Cluster, start the MapReduce job, and get the result text file from the Hadoop Cluster back to Dumbo's login node. The third time is to get the result text file from the login node back to the admin's local computer.
 
-The password is 1398Ysc3672493s
 
-For security reasons, the password will be valid until December 28th, 2018. 
+For security reasons, the password will be sent separately in the submission email.
+
 
 4.  upload the outcome text file back to the cloud, parse the text file and store it back to the database.
 
