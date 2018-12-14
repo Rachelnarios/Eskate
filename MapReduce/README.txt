@@ -2,6 +2,7 @@ Our MapReduce job is processed on the Hadoop cluster called Dumbo which is maint
 
 Dumbo: https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Dumbo
 
+Since our MapReduce is deployed on NYU's hadoop cluster, you can start the mapreduce job within NYU network. If not, you can first connect to NYU VPN and all procedures are the same.
 
 To run the MapReduce job on our service, please follow the procedure below:
 
