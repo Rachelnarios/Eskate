@@ -22,7 +22,7 @@ const Station = new mongoose.Schema({
 	lng:{type:Number, required:true},
 	total_dock: {type:Number, required:true},
 	available_skateboards: {type:Number, required:true}
-}); 
+});
 
 const Skateboard = new mongoose.Schema({
 	in_use: {type: Boolean, default:false}
@@ -52,4 +52,4 @@ tripModel: mongoose.model('Trip', Current_Trip),
 completedTripsModel:mongoose.model('Complete',Completed_Trips)
 }
 
-mongoose.connect('mongodb://localhost/eskate');
+mongoose.connect('mongodb://Eskate:Yairisthebestprof1!@ds123400.mlab.com:23400/eskates');
