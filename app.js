@@ -3,7 +3,7 @@ const path = require('path');
 const session = require("express-session");
 const bodyParser = require('body-parser');
 const fs = require('fs');
-const users = require("./sample_users.json").users;
+const USER = require("./sample_users.json").users;
 const stations = require("./sample_stations.json").stations;
 const db = require("./db.js");
 const PORT = process.env.PORT || 3000;
@@ -19,24 +19,24 @@ const app = express()
 .set('view engine', 'hbs');
 
 //Add sample users on start up
-for(let x in users){
+for(let x in USER){
 
-    db.userModel.find({username:users[x].username},(err,data)=>{
+    db.userModel.find({username:USER[x].username},(err,data)=>{
         if (err){
             console.log(err);
         }else if(data[0]){
             console.log("Username already exists");
         }else{
             const newUser = new db.userModel({
-                username: users[x].username,
-                email: users[x].email,
+                username: USER[x].username,
+                email: USER[x].email,
                  history_trips: []
             });
             newUser.save((err)=>{
                 if (err){
                     console.log("save " + err);
                 }else{
-                    console.log("added "+ users[x].username);
+                    console.log("added "+ USER[x].username);
                 }
             })
         }
@@ -79,6 +79,7 @@ app.get("/land",(req,res)=>{
 app.get('/download', function(req, res){
 var file = __dirname +"/"+'trips.txt';
 console.log(file)
+
   res.download(file); // Set disposition and send it.
 });
 app.get("/users",(req,res)=>{
@@ -150,7 +151,10 @@ app.post("/login",(req,res)=>{
         })
     })
 
+      app.post("/send",(req,res)=>{
+        db.userModel.drop()
 
+      })
     app.post("/takeboard",(req,res)=>{
         db.stationModel.findOneAndUpdate({name:req.body.stationName},{ $inc: {available_skateboards: -1} },(err,data)=>{
             if (err){
@@ -222,7 +226,5 @@ app.post("/login",(req,res)=>{
         });
     })
 
-
-    app.pos
 
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
