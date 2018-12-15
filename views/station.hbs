@@ -1,42 +1,67 @@
 <body>
-    <h2> Station Check </h2>
+    <h2> Running Map Reduce </h2>
 
     <table class="container">
       <thead>
         <tr>
-          <th><h1>Location</h1></th>
-          <th><h1># Available Skateboards</h1></th>
-          <th><h1>Available Space</h1></th>
-          <th><h1>Station ID</h1></th>
+          <th><h1>Steps</h1></th>
+          <th><h1>1.  Download the "completed trips" from the cloud as a trips.txt file to admin's local computer</h1></th>
+          <th><h1>2.  Change the input and output file path in the script to adapt to this admin's local file system
+</h1></th>
+          <th><h1>3. Run the script with provided password and trips.txt to start MapReduce</h1></th>
+                    <th><h1> 4.Upload the outcome text file back to the cloud, parse the text file and store it back to the database.</h1></th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>CHELSEA</td>
-          <td>5</td>
-          <td>3</td>
-          <td>013250</td>
-        </tr>
-        <tr>
-          <td>WEST VILLAGE</td>
-          <td>3</td>
-          <td>2</td>
-          <td>005122</td>
-        </tr>
-        <tr>
-          <td>UNION SQUARE</td>
-          <td>33</td>
-          <td>0</td>
-          <td>002434</td>
-        </tr>
-        <tr>
-          <td>UES</td>
-          <td>23</td>
-          <td>3</td>
-          <td>001210</td>
-        </tr>
 
-
-      </tbody>
-    </table>
+<br>
+    <div style ="padding-bottom:10px">
+      <button type="submit" onclick="window.open('download')">Download</button>
+        <input type="file" id="myFile">
+        <hr>
+        <textarea style="width:500px;height: 400px" id="output"></textarea>
+        </div>
   </body>
+
+  <script>
+  var input = document.getElementById("myFile");
+  var output = document.getElementById("output");
+
+
+  input.addEventListener("change", function () {
+    if (this.files && this.files[0]) {
+      var myFile = this.files[0];
+      var reader = new FileReader();
+
+      reader.addEventListener('load', function (e) {
+        output.textContent = e.target.result;
+      });
+
+      reader.readAsBinaryString(myFile);
+    }
+  });
+  function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+
+  // when document is ready
+        document.getElementById("save").onclick = function() {
+            // when clicked the button
+            var content = document.getElementById('source').value;
+            // a [save as] dialog will be shown
+            window.open("data:application/txt," + encodeURIComponent(content), "_self");
+        }
+  </script>

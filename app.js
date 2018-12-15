@@ -76,6 +76,11 @@ app.get('/usertrips', (req, res) => res.render('usertrips'))
 app.get("/land",(req,res)=>{
   res.render("land")
 })
+app.get('/download', function(req, res){
+var file = __dirname +"/"+'trips.txt';
+console.log(file)
+  res.download(file); // Set disposition and send it.
+});
 app.get("/users",(req,res)=>{
     db.userModel.find({},(err,data)=>{
         res.send(data);
