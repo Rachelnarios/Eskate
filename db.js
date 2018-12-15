@@ -52,4 +52,6 @@ tripModel: mongoose.model('Trip', Current_Trip),
 completedTripsModel:mongoose.model('Complete',Completed_Trips)
 }
 
-mongoose.connect('mongodb://Eskate:Yairisthebestprof1!@ds123400.mlab.com:23400/eskates');
+// mongoose.connect('mongodb://localhost/eskate');
+mongoose.connect('mongodb://me1:xyz123@ds123400.mlab.com:23400/eskates', { useNewUrlParser: true});
+// mongodb://Eskate:<dbpassword>@ds123400.mlab.com:23400/eskates
