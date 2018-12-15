@@ -1,0 +1,1 @@
+mongoimport -h ds123400.mlab.com:23400 -d eskates -c users -u me1 -p xyz123 --file sample_users.json

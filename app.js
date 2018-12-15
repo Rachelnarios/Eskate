@@ -6,6 +6,8 @@ const fs = require('fs');
 const USER = require("./sample_users.json").users;
 const stations = require("./sample_stations.json").stations;
 const db = require("./db.js");
+var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://me1:xyz123@ds123400.mlab.com:23400/eskates"
 const PORT = process.env.PORT || 3000;
 const app = express()
 .use(express.static(path.join(__dirname, 'public')))
@@ -151,10 +153,7 @@ app.post("/login",(req,res)=>{
         })
     })
 
-      app.post("/send",(req,res)=>{
-        db.userModel.drop()
-
-      })
+      
     app.post("/takeboard",(req,res)=>{
         db.stationModel.findOneAndUpdate({name:req.body.stationName},{ $inc: {available_skateboards: -1} },(err,data)=>{
             if (err){

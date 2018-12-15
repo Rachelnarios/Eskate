@@ -15,10 +15,16 @@
 
 <br>
     <div style ="padding-bottom:10px">
-      <button type="submit" onclick="window.open('download')">Download</button>
+      <button type="submit" onclick="window.open('download')">Download .txt file</button>
+      <button type="submit" onclick="window.open('https://mlab.com/databases/eskates/collections/users?_id=_new&pageSize=10&pageNum=0&totalCount=14&')">Upload new File</button>
+      <button type="submit" onclick="window.open('https://mlab.com/databases/eskates/collections/users?pageSize=10&pageNum=0')">View All Users</button>
+
+      <form method="POST" action="/send">
         <input type="file" id="myFile">
-        <hr>
-        <textarea style="width:500px;height: 400px" id="output"></textarea>
+
+        <textarea type="text" name="send" style="width:500px;height: 400px" id="output"></textarea>
+      </form>
+
         </div>
   </body>
 
