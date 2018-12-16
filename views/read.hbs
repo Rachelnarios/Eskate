@@ -1,0 +1,29 @@
+<body>
+<h2>
+Our MapReduce job is processed on the Hadoop cluster called Dumbo which is maintained by NYU High Performance Computing. Dumbo is a 48 data node Hadoop cluster running Cloudera Distribution of Hadoop (CDH).
+</h2>
+<a href="https://wikis.nyu.edu/display/NYUHPC/Clusters+-+Dumbo" >
+Dumbo</a>
+<br>
+<p>
+Since our MapReduce is deployed on NYU's hadoop cluster, you can start the mapreduce job within NYU network. If not, you can first connect to NYU VPN and all procedures are the same.
+</p>
+<h2>
+To run the MapReduce job on our service, please follow the procedure below:
+</h2>
+<li>
+1.  download "completed trips" from the cloud server as a trips.txt file to admin's local computer
+</li>
+<li>
+2.  change the input and output file path in the script skate.sh to adapt to the admin's local file system
+</li>
+<li>
+3.  run the script with provided password and trips.txt to start MapReduce
+</li>
+
+The admin will be required to enter the password three times when running skate.sh. The first time is to send trips.txt to Dumbo's login node. The second time is to run a remote script skate_remo.sh that would send trips.txt to the Hadoop Cluster, start the MapReduce job, and get the result text file from the Hadoop Cluster back to Dumbo's login node. The third time is to get the result text file from the login node back to the admin's local computer.
+
+
+For security reasons, the password will be sent separately in the submission email.
+
+</body>

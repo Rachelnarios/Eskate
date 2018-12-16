@@ -78,6 +78,9 @@ app.get('/usertrips', (req, res) => res.render('usertrips'))
 app.get("/land",(req,res)=>{
   res.render("land")
 })
+app.get("/read",(req,res)=>{
+  res.render("read")
+})
 app.get('/download', function(req, res){
 var file = __dirname +"/"+'trips.txt';
 console.log(file)
@@ -89,6 +92,8 @@ app.get("/users",(req,res)=>{
         res.send(data);
     })
 })
+
+
 //---------------Requests that alter the state of the database-----------------
 
 //Listen for requests to register a new user to the DB
@@ -153,7 +158,7 @@ app.post("/login",(req,res)=>{
         })
     })
 
-      
+
     app.post("/takeboard",(req,res)=>{
         db.stationModel.findOneAndUpdate({name:req.body.stationName},{ $inc: {available_skateboards: -1} },(err,data)=>{
             if (err){

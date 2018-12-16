@@ -1,34 +1,28 @@
-<body>
-    <h2> Running Map Reduce </h2>
+<body style="text-align: left">
+    <p> Running Map Reduce </p>
 
     <table class="container">
-      <thead>
-        <tr>
-          <th><h1>Steps</h1></th>
-          <th><h1>1.  Download the "completed trips" from the cloud as a trips.txt file to admin's local computer</h1></th>
-          <th><h1>2.  Change the input and output file path in the script to adapt to this admin's local file system
-</h1></th>
-          <th><h1>3. Run the script with provided password and trips.txt to start MapReduce</h1></th>
-                    <th><h1> 4.Upload the outcome text file back to the cloud, parse the text file and store it back to the database.</h1></th>
-        </tr>
-      </thead>
 
-<br>
-    <div style ="padding-bottom:10px">
-      <button type="submit" onclick="window.open('download')">Download .txt file</button>
-      <button type="submit" onclick="window.open('https://mlab.com/databases/eskates/collections/users?_id=_new&pageSize=10&pageNum=0&totalCount=14&')">Upload new File</button>
-      <button type="submit" onclick="window.open('https://mlab.com/databases/eskates/collections/users?pageSize=10&pageNum=0')">View All Users</button>
+        <tr >
+          <p>Steps</p>
+          <li> 1. Click on Download trips.txt     <button type="submit" onclick="window.open('download')">  Download trips.txt file</button> </li>
+          <li> 2. Go to terminal and run MapReduce commands </li>
+          <ul style="margin-left:15px"> 2.1  Change the input and output file path in the script skate.sh to adapt to the admin's local file system </ul>
+          <ul style="margin-left:15px"> 2.2 Run the script with provided password and trips.txt to start MapReduce </ul>
+          <li> 3. Click on Update Users and copy the text into terminal with name and source of the file   <button type="submit" onclick="myFunction()">  Update Users</button>
+</li>
+          <li> 4. Go to view all users to see Mapreduce in action   <button type="submit" onclick="window.open('land')">  View All Trips</button> </li></li>
 
-      <form method="POST" action="/send">
-        <input type="file" id="myFile">
+          <li>*. Map Reduce Steps
+                    4.Upload the outcome text file back to the cloud, parse the text file and store it back to the database.
 
-        <textarea type="text" name="send" style="width:500px;height: 400px" id="output"></textarea>
-      </form>
-
-        </div>
   </body>
 
   <script>
+  function myFunction() {
+    var person = prompt("Run the following command:","mongoimport -h ds123400.mlab.com:23400 -d eskates -c users -u me1 -p xyz123 --file NAME_OF_YOUR_FILE.json");
+
+}
   var input = document.getElementById("myFile");
   var output = document.getElementById("output");
 
