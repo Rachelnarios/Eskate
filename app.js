@@ -82,7 +82,7 @@ app.get("/read",(req,res)=>{
   res.render("read")
 })
 app.get('/download', function(req, res){
-var file = __dirname +"/"+'trips.txt';
+var file = 'trips.txt';
 console.log(file)
 
   res.download(file); // Set disposition and send it.

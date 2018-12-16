@@ -3,7 +3,7 @@
 Providing NYC with skateboards
 
 ## Getting Started
-In this demo the user admin (you) will run a simple Map reduce to see how the Eskate service would function.This is a simulation and in real life the user would tap in their id card and an automated script would run this.
+In this demo the user admin (you) will run a simple Map reduce to see how the Eskate service would function. This is a simulation in real life the user would tap in their id card and an automated script would run this.
 ```
 Go to: and explore the user view
 The user is able to look at where stations are located
@@ -14,7 +14,7 @@ The Admin is able to check out a skateboard, return them, and view all users.
 ### Prerequisites
 
 Make sure you have downloaded all Node/NPM dependencies
-Please Log into [MLAB](https://Mlab.com)before continuing with Map Reduce: Eskate Yairisthebestprof1!
+Please Log into [MLAB](https://Mlab.com) before continuing with Map Reduce (All credentials have been provided in an email )
 
 ## Map Reduce
 
