@@ -2,6 +2,18 @@
 
 Providing NYC with skateboards
 
+### Prerequisites
+```
+Go to: https://raw.githubusercontent.com/Rachelnarios/Eskate/master/trips.txt and save trips as a txt file. You can simply right click and save
+Go to:https://raw.githubusercontent.com/Rachelnarios/Eskate/master/MapReduce/skate.sh and save in the same manner as above (Instead of .txt is .sh This should be trigger automatically)
+Make sure All dependencies are downloaded
+
+Make sure you have downloaded all Node/NPM dependencies
+Please Log into [MLAB](https://Mlab.com) before continuing with Map Reduce (All credentials have been provided in an email )
+
+For a more In depth VIEW: https://github.com/Rachelnarios/Eskate/archive/master.zip
+```
+
 ## Getting Started
 In this demo the user admin (you) will run a simple Map reduce to see how the Eskate service would function. This is a simulation in real life the user would tap in their id card and an automated script would run this.
 ```
@@ -11,10 +23,7 @@ Go to:https://coral-box-216812.appspot.com/station for the admin view
 The Admin is able to check out a skateboard, return them, and view all users.
 ```
 
-### Prerequisites
 
-Make sure you have downloaded all Node/NPM dependencies
-Please Log into [MLAB](https://Mlab.com) before continuing with Map Reduce (All credentials have been provided in an email )
 
 ## Map Reduce
 
