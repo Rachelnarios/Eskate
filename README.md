@@ -5,9 +5,9 @@ Providing NYC with skateboards
 ## Getting Started
 In this demo the user admin (you) will run a simple Map reduce to see how the Eskate service would function. This is a simulation in real life the user would tap in their id card and an automated script would run this.
 ```
-Go to: and explore the user view
+Go to: https://coral-box-216812.appspot.com/ & explore the user view
 The user is able to look at where stations are located
-Go to: For the admin view
+Go to:https://coral-box-216812.appspot.com/station for the admin view
 The Admin is able to check out a skateboard, return them, and view all users.
 ```
 
