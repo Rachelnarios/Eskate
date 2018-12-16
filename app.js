@@ -79,14 +79,13 @@ app.get("/land",(req,res)=>{
   res.render("land")
 })
 app.get("/read",(req,res)=>{
-  res.render("read")
+  res.render('read')
 })
 app.get('/download', function(req, res){
 var file = 'trips.txt';
-console.log(file)
-
   res.download(file); // Set disposition and send it.
 });
+
 app.get("/users",(req,res)=>{
     db.userModel.find({},(err,data)=>{
         res.send(data);

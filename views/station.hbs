@@ -5,26 +5,30 @@
 
         <tr >
           <p>Steps</p>
-        <!-- //  <li> 1. Click on Download trips.txt     <button type="submit" onclick="window.open('download')">  Download trips.txt file</button> </li> -->
+        <!-- //  <li> 1. Click on Download trips.txt     <button type="submit" onclick="window.open('land')">  Download trips.txt file</button> </li> -->
             <li> 1.Go here to save the file <button type="submit" onclick="window.open('https://raw.githubusercontent.com/Rachelnarios/Eskate/master/trips.txt')"> User Sample Raw Text</li>
-          <li> 2. Go to terminal and run MapReduce commands *  <button type="submit" onclick="window.open('read')"> MAPREDUCE </button></li>
-          <ul > 2.1  Change the input and output file path in the script <a href="https://raw.githubusercontent.com/Rachelnarios/Eskate/master/MapReduce/skate.sh"> skate.sh </a> to adapt to the admin's local file system </ul>
+          <li> 2. Go to terminal and run MapReduce commands </li>
+          <ul > 2.1  Change the input and output file path in the script <a href="https://raw.githubusercontent.com/Rachelnarios/Eskate/master/MapReduce/skate.sh" target="_blank"> skate.sh </a> to adapt to the admin's local file system </ul>
           <ul> 2.2 Run the script with provided password and trips.txt to start MapReduce </ul>
           <li> 3. Click on Update Users and copy the text into terminal with name and source of the file   <button type="submit" onclick="myFunction()">  Update Users</button>
 </li>
           <li> 4. Go to view all users to see Mapreduce in action   <button type="submit" onclick="window.open('land')">  View All Trips</button> </li></li>
 
-          <li>*. Map Reduce Steps
-                    4.Upload the outcome text file back to the cloud, parse the text file and store it back to the database.
-
   </body>
 
   <script>
   function myFunction() {
+    var request = new XMLHttpRequest();
+    request.open("GET", "/read", false);
+    request.send(null)
     var person = prompt("Run the following command:","mongoimport -h ds123400.mlab.com:23400 -d eskates -c users -u me1 -p xyz123 --file NAME_OF_YOUR_FILE.json");
 
 }
-
+function down(){
+  var request = new XMLHttpRequest();
+  request.open("GET", "/download", false);
+  request.send(null)
+}
   var input = document.getElementById("myFile");
   var output = document.getElementById("output");
 
